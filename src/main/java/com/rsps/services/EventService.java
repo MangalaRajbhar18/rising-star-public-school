@@ -25,4 +25,19 @@ public class EventService {
     public void deleteEvent(Long id) {
         eventRepository.deleteById(id);
     }
+    
+
+    // UPDATE EVENT
+    public Event updateEvent(Long id, Event updatedEvent) {
+
+        Event event = eventRepository.findById(id)
+                .orElseThrow(() -> new RuntimeException("Event not found"));
+
+        event.setTitle(updatedEvent.getTitle());
+        event.setDate(updatedEvent.getDate());
+        event.setDescription(updatedEvent.getDescription());
+        event.setImage(updatedEvent.getImage());
+
+        return eventRepository.save(event);
+    }
 }
