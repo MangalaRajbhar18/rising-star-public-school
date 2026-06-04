@@ -1,4 +1,3 @@
-
 package com.rsps.config;
 
 import org.springframework.context.annotation.Bean;
@@ -11,7 +10,9 @@ public class CorsConfig {
 
     @Bean
     public WebMvcConfigurer corsConfigurer() {
+
         return new WebMvcConfigurer() {
+
             @Override
             public void addCorsMappings(CorsRegistry registry) {
 
@@ -30,3 +31,4 @@ public class CorsConfig {
             }
         };
     }
+}
