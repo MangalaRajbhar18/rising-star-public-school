@@ -18,7 +18,8 @@ public class CorsConfig {
 
                 registry.addMapping("/**")
                         .allowedOrigins(
-                                "https://superb-cascaron-798d76.netlify.app"
+                                "https://superb-cascaron-798d76.netlify.app",
+                                "http://localhost:3000"
                         )
                         .allowedMethods(
                                 "GET",

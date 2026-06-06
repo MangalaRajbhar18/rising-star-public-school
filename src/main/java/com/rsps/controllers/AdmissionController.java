@@ -13,7 +13,9 @@ import com.rsps.services.AdmissionService;
 @RestController
 @RequestMapping("/api/admission")
 
-@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin(origins = {
+	    "http://localhost:3000",
+	    "https://superb-cascaron-798d76.netlify.app"})
 public class AdmissionController {
 
     @Autowired

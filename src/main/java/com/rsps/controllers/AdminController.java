@@ -12,7 +12,9 @@ import com.rsps.services.AdminService;
 
 @RestController
 @RequestMapping("/api/admin")
-@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin(origins = {
+	    "http://localhost:3000",
+	    "https://superb-cascaron-798d76.netlify.app"})
 public class AdminController {
       
 	@Autowired

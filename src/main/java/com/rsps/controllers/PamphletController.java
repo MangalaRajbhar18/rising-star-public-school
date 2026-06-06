@@ -16,7 +16,9 @@ import com.rsps.repositories.PamphletRepository;
 
 @RestController
 @RequestMapping("/api/pamphlets")
-@CrossOrigin("*")
+@CrossOrigin(origins = {
+	    "http://localhost:3000",
+	    "https://superb-cascaron-798d76.netlify.app"})
 public class PamphletController {
 	
 	 private final PamphletRepository pamphletRepository;

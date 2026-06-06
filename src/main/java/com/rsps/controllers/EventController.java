@@ -17,7 +17,9 @@ import com.rsps.models.Event;
 import com.rsps.services.EventService;
 
 @RestController
-@CrossOrigin("http://localhost:3000")
+@CrossOrigin(origins = {
+	    "http://localhost:3000",
+	    "https://superb-cascaron-798d76.netlify.app"})
 @RequestMapping("/api/events")
 public class EventController {
 

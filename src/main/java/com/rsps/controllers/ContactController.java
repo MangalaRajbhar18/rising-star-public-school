@@ -17,7 +17,9 @@ import com.rsps.services.ContactService;
 
 @RestController
 @RequestMapping("/api/contact")
-@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin(origins = {
+	    "http://localhost:3000",
+	    "https://superb-cascaron-798d76.netlify.app"})
 public class ContactController {
 	
 	  @Autowired
