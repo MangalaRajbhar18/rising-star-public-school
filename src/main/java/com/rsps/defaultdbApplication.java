@@ -4,10 +4,10 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class RisingStarPublicSchoolApplication {
+public class defaultdbApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(RisingStarPublicSchoolApplication.class, args);
+		SpringApplication.run(defaultdbApplication.class, args);
 	}
 
 }
