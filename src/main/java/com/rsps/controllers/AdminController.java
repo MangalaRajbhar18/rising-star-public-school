@@ -1,13 +1,17 @@
 package com.rsps.controllers;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.rsps.models.Admin;
+import com.rsps.repositories.AdminRepository;
 import com.rsps.services.AdminService;
 
 @RestController
@@ -19,6 +23,9 @@ public class AdminController {
       
 	@Autowired
     private AdminService adminService;
+	
+	@Autowired
+	private AdminRepository adminRepository;
 
 	@PostMapping("/login")
 	public String login(@RequestBody Admin admin) {
@@ -33,5 +40,10 @@ public class AdminController {
 	    }
 
 	    return "Invalid Email or Password";
+	}
+	
+	@GetMapping("/all")
+	public List<Admin> getAllAdmins() {
+	    return adminRepository.findAll();
 	}
 }
