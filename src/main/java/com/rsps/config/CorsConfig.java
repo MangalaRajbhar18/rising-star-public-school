@@ -18,16 +18,11 @@ public class CorsConfig {
 
                 registry.addMapping("/**")
                         .allowedOrigins(
+                                "https://risingstareducationsanstha.com",
                                 "https://superb-cascaron-798d76.netlify.app",
                                 "http://localhost:3000"
                         )
-                        .allowedMethods(
-                                "GET",
-                                "POST",
-                                "PUT",
-                                "DELETE",
-                                "OPTIONS"
-                        )
+                        .allowedMethods("*")
                         .allowedHeaders("*");
             }
         };
